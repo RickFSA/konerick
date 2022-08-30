@@ -20,9 +20,12 @@ ssh-keygen -t rsa -f ~/.ssh/<KEY_FILENAME> -C <USERNAME> -b 2048
 * `KEY_FILENAME`: the name for SSH key file
 * `USERNAME`: your username on the Virtual Machine(VM)
 
-This above action will generate 2 files on the .ssh/ folder
-* <KEY_FILENAME> This is your private key
-* <KEY_FILENAME>.pub This is your public key
+The above action will generate 2 files on the .ssh/ folder
+* `KEY_FILENAME` This is your private key
+* `KEY_FILENAME.pub` This is your public key
 
-### Add public SSH Key to your GCP account
-Add the public key to your Compute Engine > Metadata > SSH KEYS
+### Add public SSH Key to your GCP > Compute Engine > Metadata > SSH KEYS
+```shell
+cat <KEY_FILENAME>.pub
+```
+Use command `cat` to open the public key
