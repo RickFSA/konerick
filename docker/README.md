@@ -58,6 +58,7 @@ postgres:13
 `-v`: volumns
 `-p`: ports
 `--name`: container name
+`--network`: network name
 
 ### Stop a container
 ```shell
@@ -84,4 +85,9 @@ Run a docker-compose on a docker-compose.yaml file located under the same direct
 ### Shutdown a docker-compose
 ```shell
 docker-compose down
+```
+
+### Open bash in the container
+```shell
+docker exec -it <CONTAINER_ID> bash
 ```
